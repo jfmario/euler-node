@@ -82,6 +82,7 @@ this.solve = function ()
 {
     return process ( new FunctionX ( realFunc ), 14 );
 };
+// should return 74
 this.test = function ()
 {
     return process ( new FunctionX ( testFunc ), 5 );
