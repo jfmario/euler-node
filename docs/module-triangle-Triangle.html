@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: FunctionX</title>
+    <title>JSDoc: Class: Triangle</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: FunctionX</h1>
+    <h1 class="page-title">Class: Triangle</h1>
 
     
 
@@ -29,7 +29,7 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="module-functionX.html">functionX</a>~</span>FunctionX</h2>
+            <span class="ancestors"><a href="module-triangle.html">triangle</a>~</span>Triangle</h2>
         
     
 </header>
@@ -41,14 +41,14 @@
 
     
 
-    <h4 class="name" id="FunctionX"><span class="type-signature"></span>new FunctionX<span class="signature">(func)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Triangle"><span class="type-signature"></span>new Triangle<span class="signature">(obj)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Creates a new FunctionX object.
+    Creates a new Triangle object.
 </div>
 
 
@@ -84,13 +84,13 @@
 
         <tr>
             
-                <td class="name"><code>func</code></td>
+                <td class="name"><code>obj</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">object</span>
 
 
             
@@ -100,7 +100,7 @@
 
             
 
-            <td class="description last">A function taking a number and returning a number</td>
+            <td class="description last">An object containing construction information.</td>
         </tr>
 
     
@@ -138,13 +138,13 @@
 
         <tr>
             
-                <td class="name"><code>func</code></td>
+                <td class="name"><code>a</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">Line</span>
 
 
             
@@ -154,7 +154,53 @@
 
             
 
-            <td class="description last">A function of x</td>
+            <td class="description last">One line of the Triangle</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>b</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Line</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Another line of the Triangle</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>c</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Line</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Another line of the Triangle</td>
         </tr>
 
     
@@ -193,12 +239,21 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="functionX.js.html">functionX.js</a>, <a href="functionX.js.html#line7">line 7</a>
+        <a href="triangle.js.html">triangle.js</a>, <a href="triangle.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
     
 
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="module-line-Line.html">module:line~Line</a></li>
+        
+            <li><a href="module-point-Point.html">module:point~Point</a></li>
+        </ul>
+    </dd>
     
 
     
@@ -216,6 +271,14 @@
 
 
 
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// All the following lines create the same Triangle
+new Triangle ({ points: { a: new Point ( 0, 2 ), b: new Point ( 2, 0 ), c: new Point ( -2, 0 ) });
+new Triangle ({ lines: { a: new Line ( point0, point 1 ), b: new Line ( point1, point2 ), c: new Line ( point2, point0 ) });
+new Triangle ({ coordinates: [ 0, 2, 2, 0, -2, 0 ] });</code></pre>
 
 
 
@@ -242,14 +305,14 @@
 
     
 
-    <h4 class="name" id="generatePoints"><span class="type-signature"></span>#generatePoints<span class="signature">(max)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="containsOrigin"><span class="type-signature"></span>#containsOrigin<span class="signature">()</span><span class="type-signature"> &rarr; {boolean}</span></h4>
 
     
 
 
 
 <div class="description">
-    Generates points from the function from x=1 to x=max.
+    Determines whether or not the Triangle contains origin by using the ray test with the y-axis.
 </div>
 
 
@@ -258,55 +321,6 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>max</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The maximum</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -342,19 +356,12 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="functionX.js.html">functionX.js</a>, <a href="functionX.js.html#line18">line 18</a>
+        <a href="triangle.js.html">triangle.js</a>, <a href="triangle.js.html#line48">line 48</a>
     </li></ul></dd>
     
 
     
 
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="module-point-Point.html">module:point~Point</a></li>
-        </ul>
-    </dd>
     
 
     
@@ -376,7 +383,7 @@
 
         
 <div class="param-desc">
-    An array of Points
+    true if the Triangle contains origin, false otherwise
 </div>
 
 
@@ -387,7 +394,7 @@
     </dt>
     <dd>
         
-<span class="param-type">array</span>
+<span class="param-type">boolean</span>
 
 
     </dd>

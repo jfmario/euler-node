@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: functionX.js</title>
+    <title>JSDoc: Source: line.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: functionX.js</h1>
+    <h1 class="page-title">Source: line.js</h1>
 
     
 
@@ -27,44 +27,52 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module functionX
+ * @module line
  */
  
 var Point = require ( './point' );
 
 /**
- * Creates a new FunctionX object.
- * @class FunctionX
- * @param {function} func - A function taking a number and returning a number
- * @property {function} func - A function of x
+ * Creates a new Line object. The Line class represents a line between 2 points.
+ * @class Line
+ * @param {Point} a - The first Point
+ * @param {Point} b - The second Point
+ * @property {Point} a - The first Point
+ * @property {Point} b - The second Point
+ * @property {number} slope - The slope of the Line
+ * @property {Point} yIntercept - The y-intercept of the line ( regardless of whether or not it is actually a part of the segment )
+ * @see module:point~Point
+ * @example
+ * // Create line y = x from the interval [0,10]
+ * new Line ( new Point ( 0, 0 ), new Point ( 10, 10 ) );
  */
-var FunctionX = function ( func )
+var Line = function ( a, b )
 {
-    this.func = func;
+    this.a = a;
+    this.b = b;
+    this.slope = a.slopeToOtherPoint ( b );
+    /*
+     * y = mx + b
+     * b = y - mx
+     */
+    this.yIntercept = new Point ( 0, a.y - this.slope * a.x );
 };
 
 /**
-* Generates points from the function from x=1 to x=max.
-* @memberof! module:functionX~FunctionX#
-* @function generatePoints
-* @param {number} max - The maximum 
-* @returns {array} An array of Points
-* @see module:point~Point
+* Determines whether or not the Line's y-intercept is a part of the segment.
+* @memberof! module:line~Line#
+* @function yInterceptInSegment
+* @returns {boolean} true if the Line's y-intercept is within the Line segment, otherwise false
 */
-FunctionX.prototype.generatePoints = function ( max )
+Line.prototype.yInterceptInSegment = function ( arg )
 {
-    
-    var points = [];
-    
-    for ( var i = 1; i &lt;= max; ++i )
-    {
-        points.push ( new Point ( i, this.func ( i ) ) );
-    }
-    
-    return points;
+    // if the endpoints are on opposite sides of the y-axis, return true
+    if ( this.a.x >= 0 &amp;&amp; this.b.x &lt;= 0 ) return true;
+    if ( this.a.x &lt;= 0 &amp;&amp; this.b.x >= 0 ) return true;
+    return false;
 };
 
-module.exports = FunctionX;</code></pre>
+module.exports = Line;</code></pre>
         </article>
     </section>
 
