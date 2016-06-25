@@ -18,6 +18,17 @@ To solve a problem:
 node solve.js <problemNumber>
 ```
 
+## Testing #
+
+Runs all tests:
+
+```bash
+mocha tests --recursive
+```
+
+Currently the only test is to run all Project Euler test cases against
+expected solutions.
+
 ## Files #
 
 ### `data` #
