@@ -1,4 +1,6 @@
 /**
+ * 
+ * Created from Problem 102.
  * @module line
  */
  

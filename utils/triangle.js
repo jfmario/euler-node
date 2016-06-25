@@ -1,4 +1,6 @@
 /**
+ * 
+ * Created for Problem 102.
  * @module triangle
  */
  
