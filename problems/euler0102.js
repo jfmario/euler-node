@@ -4,7 +4,7 @@
  */
  
 var fs = require ( 'fs' );
-var Triangle = require ( '../../utils/triangle' );
+var Triangle = require ( '../utils/triangle' );
  
 // Perform the logic for solving the problem.
 function process ( textFile )

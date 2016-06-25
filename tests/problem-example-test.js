@@ -6,8 +6,8 @@
  
 var chai = require ( 'chai' );
 var expect = chai.expect;
-var E0101 = require ( '../problems/0101-0150/euler0101' );
-var E0102 = require ( '../problems/0101-0150/euler0102' );
+var E0101 = require ( '../problems/euler0101' );
+var E0102 = require ( '../problems/euler0102' );
 
 describe( 'EulerTestCases', function() {
     it ( 'answer to Problem #101 test case should be 74', function() {

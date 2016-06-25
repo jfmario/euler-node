@@ -3,7 +3,7 @@
  * @module problems/0101-0150/euler0101.js
  */
  
-var FunctionX = require ( '../../utils/functionX' );
+var FunctionX = require ( '../utils/functionX' );
  
 // Test case function
 function testFunc ( x ) { return x * x * x; }
