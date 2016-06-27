@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: functionX.js</title>
+    <title>JSDoc: Source: fibonacci.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: functionX.js</h1>
+    <h1 class="page-title">Source: fibonacci.js</h1>
 
     
 
@@ -27,44 +27,54 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @module functionX
+ * Iterator class for the Fibonacci sequence.
+ * Fn = F(n-1) + F(n-2), where F1 = 1 and F2 = 1.
+ * Must use https://www.npmjs.com/package/big-integer
+ * Created for Problem #104.
+ * @module fibonacci
  */
  
-var Point = require ( './point' );
+var BigInteger = require ( 'big-integer' );
 
 /**
- * Creates a new FunctionX object.
- * @class FunctionX
- * @param {function} func - A function taking a number and returning a number
- * @property {function} func - A function of x
+ * Creates a new Fibonacci iterator object starting at 1.
+ * @class Fibonacci
+ * @property {BigInteger} last - The previous number in the sequence which use for generating the next.
+ * @property {BigInteger} current - The current number in the sequence.
+ * @property {number} number - The current count of the sequence.
  */
-var FunctionX = function ( func )
+var Fibonacci = function ( )
 {
-    this.func = func;
+    this.last = BigInteger.zero;
+    this.current = BigInteger.one;
+    this.number = 1;
 };
 
 /**
-* Generates points from the function from x=1 to x=max.
-* @memberof! module:functionX~FunctionX#
-* @function generatePoints
-* @param {number} max - The maximum 
-* @returns {array} An array of Points
-* @see module:point~Point
+* Advances the sequence to the given count.
+* @memberof! module:fibonacci~Fibonacci#
+* @function advanceTo
+* @param {number} fibNumber - The Fibonacci count to advance the sequence to.
 */
-FunctionX.prototype.generatePoints = function ( max )
+Fibonacci.prototype.advanceTo = function ( fibNumber )
 {
-    
-    var points = [];
-    
-    for ( var i = 1; i &lt;= max; ++i )
-    {
-        points.push ( new Point ( i, this.func ( i ) ) );
-    }
-    
-    return points;
+    while ( this.number &lt; fibNumber ) this.nextNumber ();
+};
+/**
+* Advances the sequence to the next number and returns it.
+* @memberof! module:fibonacci~Fibonacci#
+* @function nextNumber
+* @returns {BigInteger} The next number in the Fibonacci sequence.
+*/
+Fibonacci.prototype.nextNumber = function ( )
+{
+    var old = BigInteger ( this.current );
+    this.current = this.current.plus ( this.last );
+    this.last = BigInteger ( old );
+    return this.current;
 };
 
-module.exports = FunctionX;</code></pre>
+module.exports = Fibonacci;</code></pre>
         </article>
     </section>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: FunctionX</title>
+    <title>JSDoc: Class: Fibonacci</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: FunctionX</h1>
+    <h1 class="page-title">Class: Fibonacci</h1>
 
     
 
@@ -29,7 +29,7 @@
 <header>
     
         <h2>
-            <span class="ancestors"><a href="module-functionX.html">functionX</a>~</span>FunctionX</h2>
+            <span class="ancestors"><a href="module-fibonacci.html">fibonacci</a>~</span>Fibonacci</h2>
         
     
 </header>
@@ -41,14 +41,14 @@
 
     
 
-    <h4 class="name" id="FunctionX"><span class="type-signature"></span>new FunctionX<span class="signature">(func)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Fibonacci"><span class="type-signature"></span>new Fibonacci<span class="signature">()</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Creates a new FunctionX object.
+    Creates a new Fibonacci iterator object starting at 1.
 </div>
 
 
@@ -57,55 +57,6 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>func</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">function</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">A function taking a number and returning a number</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -138,13 +89,13 @@
 
         <tr>
             
-                <td class="name"><code>func</code></td>
+                <td class="name"><code>last</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type">BigInteger</span>
 
 
             
@@ -154,7 +105,53 @@
 
             
 
-            <td class="description last">A function of x</td>
+            <td class="description last">The previous number in the sequence which use for generating the next.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>current</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">BigInteger</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The current number in the sequence.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>number</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The current count of the sequence.</td>
         </tr>
 
     
@@ -193,7 +190,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="functionX.js.html">functionX.js</a>, <a href="functionX.js.html#line7">line 7</a>
+        <a href="fibonacci.js.html">fibonacci.js</a>, <a href="fibonacci.js.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -242,14 +239,14 @@
 
     
 
-    <h4 class="name" id="generatePoints"><span class="type-signature"></span>#generatePoints<span class="signature">(max)</span><span class="type-signature"> &rarr; {array}</span></h4>
+    <h4 class="name" id="advanceTo"><span class="type-signature"></span>#advanceTo<span class="signature">(fibNumber)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Generates points from the function from x=1 to x=max.
+    Advances the sequence to the given count.
 </div>
 
 
@@ -285,7 +282,7 @@
 
         <tr>
             
-                <td class="name"><code>max</code></td>
+                <td class="name"><code>fibNumber</code></td>
             
 
             <td class="type">
@@ -301,7 +298,7 @@
 
             
 
-            <td class="description last">The maximum</td>
+            <td class="description last">The Fibonacci count to advance the sequence to.</td>
         </tr>
 
     
@@ -342,19 +339,94 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="functionX.js.html">functionX.js</a>, <a href="functionX.js.html#line18">line 18</a>
+        <a href="fibonacci.js.html">fibonacci.js</a>, <a href="fibonacci.js.html#line25">line 25</a>
     </li></ul></dd>
     
 
     
 
     
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="module-point-Point.html">module:point~Point</a></li>
-        </ul>
-    </dd>
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="nextNumber"><span class="type-signature"></span>#nextNumber<span class="signature">()</span><span class="type-signature"> &rarr; {BigInteger}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Advances the sequence to the next number and returns it.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fibonacci.js.html">fibonacci.js</a>, <a href="fibonacci.js.html#line35">line 35</a>
+    </li></ul></dd>
+    
+
+    
+
     
 
     
@@ -376,7 +448,7 @@
 
         
 <div class="param-desc">
-    An array of Points
+    The next number in the Fibonacci sequence.
 </div>
 
 
@@ -387,7 +459,7 @@
     </dt>
     <dd>
         
-<span class="param-type">array</span>
+<span class="param-type">BigInteger</span>
 
 
     </dd>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: functionX.js</title>
+    <title>JSDoc: Module: fibonacci</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,56 +17,136 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: functionX.js</h1>
+    <h1 class="page-title">Module: fibonacci</h1>
 
     
 
 
 
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- * @module functionX
- */
- 
-var Point = require ( './point' );
 
-/**
- * Creates a new FunctionX object.
- * @class FunctionX
- * @param {function} func - A function taking a number and returning a number
- * @property {function} func - A function of x
- */
-var FunctionX = function ( func )
-{
-    this.func = func;
-};
+<section>
 
-/**
-* Generates points from the function from x=1 to x=max.
-* @memberof! module:functionX~FunctionX#
-* @function generatePoints
-* @param {number} max - The maximum 
-* @returns {array} An array of Points
-* @see module:point~Point
-*/
-FunctionX.prototype.generatePoints = function ( max )
-{
+<header>
     
-    var points = [];
+        
+            
+        
     
-    for ( var i = 1; i &lt;= max; ++i )
-    {
-        points.push ( new Point ( i, this.func ( i ) ) );
-    }
-    
-    return points;
-};
+</header>
 
-module.exports = FunctionX;</code></pre>
-        </article>
-    </section>
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">Iterator class for the Fibonacci sequence.
+Fn = F(n-1) + F(n-2), where F1 = 1 and F2 = 1.
+Must use https://www.npmjs.com/package/big-integer
+Created for Problem #104.</div>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="fibonacci.js.html">fibonacci.js</a>, <a href="fibonacci.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-fibonacci-Fibonacci.html">Fibonacci</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

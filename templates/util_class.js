@@ -1,4 +1,6 @@
 /**
+ * Description of class
+ * Created for Problem #.
  * @module point
  */
 
