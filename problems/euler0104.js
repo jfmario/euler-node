@@ -1,6 +1,6 @@
 /**
  * The solution to Project Euler problem #104.
- * @module problems/euler0101.js
+ * @module problems/euler0104.js
  */
  
 var Fibonacci = require ( '../utils/fibonacci' );

@@ -6,11 +6,16 @@
  
 var chai = require ( 'chai' );
 var expect = chai.expect;
+var E0001 = require ( '../problems/euler0001' );
 var E0101 = require ( '../problems/euler0101' );
 var E0102 = require ( '../problems/euler0102' );
 var E0104 = require ( '../problems/euler0104' );
+var E0105 = require ( '../problems/euler0105' );
 
 describe( 'EulerTestCases', function() {
+    it ( 'answer to Problem #1 test case should be 23', function() {
+        expect ( E0001.test () ).to.equal ( 23 );
+    });
     it ( 'answer to Problem #101 test case should be 74', function() {
         expect ( E0101.test () ).to.equal ( 74 );
     });
@@ -22,5 +27,8 @@ describe( 'EulerTestCases', function() {
     });
     it ( 'answer to Problem #104 test case should be 541', function() {
         expect ( E0104.test () ).to.equal ( 541 );
+    });
+    it ( 'answer to Problem #105 test case should be 1286', function() {
+        expect ( E0105.test () ).to.equal ( 1286 );
     });
 });
