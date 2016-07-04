@@ -1,3 +1,4 @@
+
 /**
  * The solution to Project Euler problem 1.
  * @module problems/euler0001.js
