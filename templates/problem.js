@@ -1,21 +1,19 @@
 /**
- * The solution to Project Euler problem 105.
- * @module problems/euler0105.js
+ * The solution to Project Euler problem #.
+ * @module problems/euler####.js
  */
  
-var FunctionX = require ( '../utils/functionX' );
- 
 // Perform the logic for solving the problem.
-function process ( functionX, max )
+function process ()
 {
-    
+    return 1;
 }
 
 this.solve = function ()
 {
-    return 1;
+    return process ( 2 );
 };
 this.test = function ()
 {
-    return 1;
+    return process ( 1 );
 };
