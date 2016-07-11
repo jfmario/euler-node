@@ -9,12 +9,12 @@ var palindromes = require ( '../utils/modules/palindromes' );
 function process ( n )
 {
     
-    var min = Math.pow ( 10, n - 1 );
-    var max = Math.pow ( 10, n ) - 1;
+    var min = Math.pow ( 10, n - 1 ); // the lowest possible multiplier
+    var max = Math.pow ( 10, n ) - 1; // the highest possible multiplier
     var maxPalindrome = 0;
     for ( var i = max; i >= min; --i )
     {
-        for ( var j = i - 1; j >= min; --j )
+        for ( var j = i ; j >= min; --j ) // avoid duplication
         {
             var product = i * j;
             if ( product > maxPalindrome )
@@ -22,6 +22,8 @@ function process ( n )
                 if ( palindromes.isPalindrome ( product ) )
                     maxPalindrome = product;
             }
+            /* if the product is less then maxPalindrome, it is time to 
+                skip to the next i */
             else break;
         }
     }
