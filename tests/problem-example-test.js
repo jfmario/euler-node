@@ -11,6 +11,7 @@ var E0002 = require ( '../problems/euler0002' );
 var E0003 = require ( '../problems/euler0003' );
 var E0004 = require ( '../problems/euler0004' );
 var E0005 = require ( '../problems/euler0005' );
+var E0006 = require ( '../problems/euler0006' );
 var E0101 = require ( '../problems/euler0101' );
 var E0102 = require ( '../problems/euler0102' );
 var E0104 = require ( '../problems/euler0104' );
@@ -31,6 +32,9 @@ describe( 'EulerTestCases', function() {
     });
     it ( 'answer to Problem #5 test case should be 2520', function() {
         expect ( E0005.test () ).to.equal ( 2520 );
+    });
+    it ( 'answer to Problem #6 test case should be 2640', function() {
+        expect ( E0006.test () ).to.equal ( 2640 );
     });
     it ( 'answer to Problem #101 test case should be 74', function() {
         expect ( E0101.test () ).to.equal ( 74 );

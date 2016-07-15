@@ -4,14 +4,14 @@
  */
  
 // Perform the logic for solving the problem.
-function process ()
+function process ( n )
 {
     return 1;
 }
 
 this.solve = function ()
 {
-    return process ( 2 );
+    return process ( 1 );
 };
 this.test = function ()
 {
