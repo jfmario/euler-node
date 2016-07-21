@@ -3,7 +3,7 @@
  * the module library is still functioning.
  * @file tests/problem-example-tests.js
  */
- 
+
 var chai = require ( 'chai' );
 var expect = chai.expect;
 
@@ -14,6 +14,7 @@ var E0004 = require ( '../problems/euler0004' );
 var E0005 = require ( '../problems/euler0005' );
 var E0006 = require ( '../problems/euler0006' );
 var E0007 = require ( '../problems/euler0007' );
+var E0008 = require ( '../problems/euler0008' );
 
 var E0101 = require ( '../problems/euler0101' );
 var E0102 = require ( '../problems/euler0102' );
@@ -42,7 +43,10 @@ describe( 'EulerTestCases', function() {
     it ( 'answer to Problem #7 test case should be 13', function() {
         expect ( E0007.test () ).to.equal ( 13 );
     });
-    
+    it ( 'answer to Problem #8 test case should be 5832', function() {
+        expect ( E0008.test () ).to.equal ( 5832 );
+    });
+
     it ( 'answer to Problem #101 test case should be 74', function() {
         expect ( E0101.test () ).to.equal ( 74 );
     });
