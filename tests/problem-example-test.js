@@ -54,6 +54,9 @@ describe( 'EulerTestCases', function() {
     it ( 'answer to Problem #10 test case should be 17', function() {
         expect ( E0010.test () ).to.equal ( 17 );
     });
+    it ( 'Problem #11 does not need to be tested', function () {
+        expect ( true ).to.equal ( true );
+    });
 
     it ( 'answer to Problem #101 test case should be 74', function() {
         expect ( E0101.test () ).to.equal ( 74 );
