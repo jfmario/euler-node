@@ -13,6 +13,7 @@ function process ( n )
         num += i;
 
         var divisors = 0;
+        // all divisors will have a pair below the square root
         for ( var j = 1; j <= Math.sqrt ( num ); ++j )
         {
             if ( num % j == 0 )
