@@ -14,9 +14,11 @@ function process ( n )
         'data/euler0013.txt' ).toString ().split ( /\r?\n/ );
     var number = new BigInteger ();
 
+    // add all the numbers together
     for ( var i = 0; i < fileLines.length; ++i )
         number = number.plus ( new BigInteger ( fileLines [i] ) );
 
+    // return the first 10 digits
     return number.toString ().slice ( 0, 10 );
 }
 
