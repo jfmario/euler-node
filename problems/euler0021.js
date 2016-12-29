@@ -1,0 +1,55 @@
+/**
+ * The solution to Project Euler problem 21.
+ * @module problems/euler0021.js
+ */
+ 
+function d ( n )
+{
+    
+    var divisor_sum = 1;
+    
+    for ( var i = 2; i < parseInt ( Math.sqrt ( n ) ) + 1; ++i )
+    {
+        if ( n % i == 0 )
+        {
+            divisor_sum += i;
+            if ( i != Math.sqrt ( n ) )
+                divisor_sum += ( n / i );
+        }
+    }
+    
+    return divisor_sum;
+}
+ 
+// Perform the logic for solving the problem.
+function process ( n )
+{
+    
+    var answer = 0;
+    var seen = [];
+    
+    for ( var i = 3; i < n; ++i )
+    {
+        if ( seen.indexOf ( i ) != -1 ) continue;
+        var d_i = d ( i );
+        if ( ( d_i != i ) && ( d_i < n ) && ( d ( d_i ) == i ) )
+        {
+            
+            seen.push ( i );
+            seen.push ( d_i );
+            
+            answer += ( i + d_i );
+        }
+    }
+    
+    return answer;
+}
+
+this.solve = function ()
+{
+    return process ( 10000 );
+};
+this.test = function ()
+{
+    return process ( 1000 );
+};
