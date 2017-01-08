@@ -10,9 +10,11 @@ function d ( n )
     
     for ( var i = 2; i < parseInt ( Math.sqrt ( n ) ) + 1; ++i )
     {
+        // see if a numbe is proper divisor
         if ( n % i == 0 )
         {
             divisor_sum += i;
+            // add the higher number in to, but don't count the square root twice
             if ( i != Math.sqrt ( n ) )
                 divisor_sum += ( n / i );
         }
@@ -32,6 +34,8 @@ function process ( n )
     {
         if ( seen.indexOf ( i ) != -1 ) continue;
         var d_i = d ( i );
+        // Make sure the d(i) is not equal to i, greater than or equal to n
+        // Then check if d ( d_i ) equals i
         if ( ( d_i != i ) && ( d_i < n ) && ( d ( d_i ) == i ) )
         {
             
