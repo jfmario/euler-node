@@ -22,6 +22,8 @@ function d ( n )
     
     return divisor_sum;
 }
+// export d for use in other problems
+this.d = d;
  
 // Perform the logic for solving the problem.
 function process ( n )
