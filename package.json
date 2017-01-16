@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "John Francis Marion",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "big-integer": "^1.6.17",
+    "chai": "^3.5.0"
+  }
 }
